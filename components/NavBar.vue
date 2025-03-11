@@ -44,4 +44,10 @@ nav ul li {
 nav ul li a {
   text-transform: uppercase;
 }
+
+@media (max-width: 1200px) {
+    nav {
+        display: none;
+    }
+}
 </style>
