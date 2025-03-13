@@ -81,10 +81,14 @@ function prevCard() {
     <div class="line"></div>
 
     <div class="carousel" ref="carouselRef">
-      <Card v-for="(project, index) in projects" :key="index"
-      :description="project.description" :title="project.title"
-      :icon="project.icon"
-      class="carousel-item" />
+      <MonitoringCard
+        v-for="(project, index) in projects"
+        :key="index"
+        :description="project.description"
+        :title="project.title"
+        :icon="project.icon"
+        class="carousel-item"
+      />
     </div>
 
     <div class="nav">
@@ -136,7 +140,7 @@ function prevCard() {
 }
 
 .nav {
-  width: 50%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   display: inline-flex;
@@ -145,5 +149,9 @@ function prevCard() {
 .arrow svg {
   width: 24px;
   height: 24px;
+}
+
+@media (max-width: 1200px) {
+  
 }
 </style>

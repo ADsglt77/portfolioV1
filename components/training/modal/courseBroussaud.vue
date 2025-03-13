@@ -313,7 +313,7 @@ function selectWeek(week: Week) {
   align-items: center;
   gap: 10px;
   width: fit-content;
-  padding: 0.4rem 0.8rem;
+  padding: 0.3rem 0.6rem;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
