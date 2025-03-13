@@ -227,7 +227,7 @@ function selectWeek(week: Week) {
 <template>
   <div class="modal">
     <div class="content">
-      <TrainingIconsArrowBack @click="emit('close')" />
+      <IconsArrowBack @click="emit('close')" />
       <div>
         <h1>BROUSSAUD</h1>
         <h5>Depuis 1936</h5>
@@ -262,7 +262,7 @@ function selectWeek(week: Week) {
       </table>
       <h6>Tout les projets sont disponibles ici :</h6>
       <a href="https://github.com/ADsglt77/broussaud" target="_blank">
-        <TrainingIconsGithub />
+        <IconsGithub />
         <p>VOIR LE REPO GITHUB</p>
       </a>
       <h6>Semaines de stage :</h6>

@@ -1,12 +1,8 @@
 <script lang="ts" setup>
-import Left from "@/components/monitoring/icons/Left.vue";
-import Right from "@/components/monitoring/icons/Right.vue";
-import Card from "@/components/monitoring/Card.vue";
-import ProgressBar from "@/components/monitoring/icons/ProgressBar.vue";
-import IconChatGPT from "@/components/monitoring/icons/IconChatGPT.vue";
-import IconGoogle from "@/components/monitoring/icons/IconGoogle.vue";
-import IconLinkedin from "@/components/monitoring/icons/IconLinkedin.vue";
-import IconComputer from "@/components/monitoring/icons/IconComputer.vue";
+import IconChatGPT from "~/components/monitoring/icons/chatGPT.vue";
+import IconGoogle from "~/components/monitoring/icons/google.vue";
+import IconLinkedin from "~/components/monitoring/icons/linkdin.vue";
+import IconComputer from "~/components/monitoring/icons/computer.vue";
 import { ref } from "vue";
 
 // Liste des projets
@@ -92,12 +88,12 @@ function prevCard() {
     </div>
 
     <div class="nav">
-      <Left @click="prevCard" />
+      <ProgressBarLeft @click="prevCard" />
       <ProgressBar
         :activeCard="activeCardIndex + 1"
         :cardNumber="projects.length - 2"
       />
-      <Right @click="nextCard" />
+      <ProgressBarRight @click="nextCard" />
     </div>
   </div>
 </template>
@@ -129,12 +125,6 @@ function prevCard() {
   margin: 0 auto;
 }
 
-/*
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-*/
-
 .carousel-item {
   flex: 0 0 calc(100% / 3 - 20px);
 }
@@ -152,6 +142,8 @@ function prevCard() {
 }
 
 @media (max-width: 1200px) {
-  
+  .carousel-item {
+    flex: 0 0 calc(100% / 2 - 20px);
+  }
 }
 </style>

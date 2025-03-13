@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 let msg = ref("");
 let blink = ref(true);
-const words = ["Developer", "Designer", "Freelancer"];
+const words = ["étudiant", "web designer", "developpeur"];
 let i = 0;
 
 const textTyping = () => {
@@ -46,7 +46,7 @@ textTyping();
 
 <template>
     <h3>SEGALAT ADRIEN</h3>
-    <h5>Creative <span>{{ msg }}</span></h5>
+    <h5>Je suis <span>{{ msg }}</span></h5>
     <router-link to="/contact" exact-active-class="active">Prendre Contact</router-link>
 </template>
 
