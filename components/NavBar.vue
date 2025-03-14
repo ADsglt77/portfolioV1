@@ -86,6 +86,24 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+@media screen and (max-width: 1450px) {
+  nav {
+  width: 60%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  nav {
+  width: 70%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+  width: 80%;
+  }
+}
+
 nav .menu-hamburger {
   top: 50px;
   right: 50px;
@@ -125,10 +143,6 @@ nav .menu-hamburger .hamburger input:checked+svg .line-top-bottom {
 }
 
 @media screen and (max-width: 850px) {
-  nav {
-    width: 90%;
-  }
-
   nav .menu-hamburger {
     display: flex;
     z-index: 20;
