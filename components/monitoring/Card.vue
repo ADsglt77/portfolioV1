@@ -54,4 +54,17 @@ defineProps({
 .card h6 {
   font-weight: 200;
 }
+
+@media (max-width: 1400px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    position: relative;
+    width: fit-content;
+    margin-top: 10px;
+  }
+}
 </style>

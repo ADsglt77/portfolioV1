@@ -141,9 +141,14 @@ function prevCard() {
   height: 24px;
 }
 
-@media (max-width: 1200px) {
-  .carousel-item {
-    flex: 0 0 calc(100% / 2 - 20px);
+@media (max-width: 1400px) {
+  .carousel {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+
+  }
+  .nav {
+    display: none;
   }
 }
 </style>
