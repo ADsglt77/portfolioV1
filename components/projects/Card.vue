@@ -10,16 +10,16 @@ defineProps({
 
 <template>
   <div class="card">
-      <img :src="image" :alt="title" class="card-image" />
-      <div class="content">
-        <h6>{{ title }}</h6>
-        <p>{{ description }}</p>
-      </div>
-      <div class="doc">
-        <a :href="documentation" download>
-          <ProjectsIconsDowload />
-        </a>
-      </div>
+    <img :src="image" :alt="title" class="card-image" />
+    <div class="content">
+      <h6>{{ title }}</h6>
+      <p>{{ description }}</p>
+    </div>
+    <div class="doc">
+      <a :href="documentation" download>
+        <ProjectsIconsDowload />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -77,5 +77,12 @@ defineProps({
 
 .doc a:hover {
   transform: scale(1.15);
+}
+
+@media (max-width: 1400px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>

@@ -109,29 +109,21 @@ function hideModals(): void {
 </script>
 
 <template>
-  <div class="projects" v-if="!modalJardinierVisible && !modalRestoVisible && !modalBibliothequeVisible && !modalCongresVisible && !modalSeminaireVisible">
+  <div class="projects"
+    v-if="!modalJardinierVisible && !modalRestoVisible && !modalBibliothequeVisible && !modalCongresVisible && !modalSeminaireVisible">
     <h3>Mes <span>Projets</span></h3>
     <div class="line"></div>
 
     <div class="carousel" ref="carouselRef">
-      <ProjectsCard
-        v-for="(project, index) in projects"
-        :key="index"
-        :image="project.image"
-        :title="project.title"
-        :description="project.description"
-        :documentation="project.documentation"
+      <ProjectsCard v-for="(project, index) in projects" :key="index" :image="project.image" :title="project.title"
+        :description="project.description" :documentation="project.documentation"
         @click="showModal(project.modalType as 'ProjetJardinier' | 'ProjetResto' | 'ProjetBibliotheque' | 'ProjetCongres' | 'ProjetSeminaire')"
-        class="carousel-item"
-      />
+        class="carousel-item" />
     </div>
 
     <div class="nav">
       <ProgressBarLeft @click="prevCard" />
-      <ProgressBar
-        :activeCard="activeCardIndex + 1"
-        :cardNumber="projects.length - 2"
-      />
+      <ProgressBar :activeCard="activeCardIndex + 1" :cardNumber="projects.length - 2" />
       <ProgressBarRight @click="nextCard" />
     </div>
   </div>
@@ -184,5 +176,21 @@ function hideModals(): void {
 .arrow svg {
   width: 24px;
   height: 24px;
+}
+
+@media (max-width: 1400px) {
+  .projects {
+    width: 80%;
+  }
+
+  .carousel {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+
+  }
+
+  .nav {
+    display: none;
+  }
 }
 </style>
