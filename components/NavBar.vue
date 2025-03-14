@@ -1,13 +1,18 @@
 <script lang="ts" setup>
-let isEnable = ref()
-isEnable.value = false
+import { ref } from "vue";
+
+let isEnable = ref(false);
+let menuCheckbox = ref<HTMLInputElement | null>(null);
 
 function clickMenu() {
-  isEnable.value = !isEnable.value
+  isEnable.value = !isEnable.value;
 }
 
 function closeMenu() {
   isEnable.value = false;
+  if (menuCheckbox.value) {
+    menuCheckbox.value.checked = false;
+  }
 }
 </script>
 
@@ -26,7 +31,7 @@ function closeMenu() {
     </div>
     <div class="menu-hamburger">
       <label class="hamburger">
-        <input type="checkbox" @click="clickMenu">
+        <input type="checkbox" ref="menuCheckbox" @click="clickMenu">
         <svg viewBox="0 0 32 32">
           <path class="line line-top-bottom"
             d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
@@ -35,6 +40,7 @@ function closeMenu() {
         </svg>
       </label>
     </div>
+
   </nav>
 </template>
 
@@ -88,19 +94,19 @@ nav ul li a:hover::after {
 
 @media screen and (max-width: 1450px) {
   nav {
-  width: 60%;
+    width: 60%;
   }
 }
 
 @media screen and (max-width: 1250px) {
   nav {
-  width: 70%;
+    width: 70%;
   }
 }
 
 @media screen and (max-width: 1000px) {
   nav {
-  width: 80%;
+    width: 80%;
   }
 }
 
@@ -126,7 +132,7 @@ nav .menu-hamburger .line {
   stroke-linejoin: round;
   stroke-width: 3;
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav .menu-hamburger .line-top-bottom {
