@@ -88,6 +88,11 @@ import cvFile from "/CV.pdf";
         text-align: center;
     }
 
+    .about img {
+        width: 250px;
+        height: 250px;
+    }
+
     .about div div a {
         
         margin: 0 auto;
