@@ -18,7 +18,7 @@ function closeMenu() {
 
 <template>
   <nav>
-    <h4>ADRIEN</h4>
+    <h1>A<span>D</span></h1>
     <div class="links" :class="{ 'mobile-menu': isEnable }">
       <ul>
         <li><router-link to="/" exact-active-class="active" @click="closeMenu">Accueil</router-link></li>
@@ -45,6 +45,11 @@ function closeMenu() {
 </template>
 
 <style scoped>
+@font-face {
+    font-family: 'EmynamCrew-Regular';
+    src: url('/fonts/EmynamCrew-Regular.ttf');
+}
+
 nav {
   width: 50%;
   height: 10vh;
@@ -53,6 +58,18 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+nav h1 {
+  font-family: 'EmynamCrew-Regular';
+  font-weight: 100;
+  color: #47d67e;
+}
+
+nav h1 span {
+  font-family: 'EmynamCrew-Regular';
+  font-weight: 100;
+  color: #fff;
 }
 
 nav ul {
