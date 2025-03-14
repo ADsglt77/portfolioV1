@@ -29,7 +29,7 @@
 
 <style scoped>
 .contact {
-  width: 50%;
+  width: 40%;
   max-width: 1200px;
   max-height: 75vh;
   display: flex;
@@ -70,35 +70,28 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .contact .form form div {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .contact .form form input,
 .contact .form form textarea {
   width: 100%;
-  height: 100%;
+  min-height: 40px;
   padding: 0.4rem 0.8rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  resize: none;
+  background: #2c2f33da;
   border-radius: 0.5rem;
+  border: none;
+  resize: none;
   transition: 0.3s;
 }
 
-.contact .form form input:focus,
-.contact .form form textarea:focus {
-  background-color: rgba(32, 70, 11, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
 .contact .form form textarea {
-  height: 25vh;
+  height: 20vh;
 }
 
 .contact .form form button {

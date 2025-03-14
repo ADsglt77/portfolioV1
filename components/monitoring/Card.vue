@@ -31,16 +31,9 @@ defineProps({
   bottom: 0px;
   left: 0px;
   padding: 0.4rem 0.8rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  background: #2c2f33da;
   border-radius: 0.5rem;
   transition: 0.3s;
-}
-
-.card-title:hover {
-  background-color: rgba(32, 70, 11, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .icon-title {
@@ -59,6 +52,6 @@ defineProps({
 }
 
 .card h6 {
-  font-weight: 500;
+  font-weight: 200;
 }
 </style>

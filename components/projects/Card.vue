@@ -12,12 +12,12 @@ defineProps({
   <div class="card">
       <img :src="image" :alt="title" class="card-image" />
       <div class="content">
-        <h3>{{ title }}</h3>
+        <h6>{{ title }}</h6>
         <p>{{ description }}</p>
       </div>
       <div class="doc">
         <a :href="documentation" download>
-          < />
+          <ProjectsIconsDowload />
         </a>
       </div>
   </div>
@@ -54,25 +54,18 @@ defineProps({
   padding: 10px 15px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
 }
 
-.content h3 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
+.content h6 {
   color: #47d67e;
 }
 
 .content p {
-  margin: 5px 0 0;
-  font-size: 12px;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .doc a {
-  display: none;
-  /*display: flex;*/
+  display: flex;
   position: absolute;
   bottom: 15px;
   right: 15px;
