@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <video src="/background.mp4" id="background" muted loop playsinline></video>
+  <img src="/background.png" id="background" alt="background" />
   <NavBar />
   <section>
     <NuxtPage />
