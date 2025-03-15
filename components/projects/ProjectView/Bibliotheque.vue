@@ -15,22 +15,34 @@ const emit = defineEmits(["close"]);
       <div class="description">
         <div>
           <h6>Repositorie :</h6>
-          <a href="https://github.com/ADsglt77/bibliotheque" target="_blank"><IconsGithub /></a>
+          <a href="https://github.com/ADsglt77/bibliotheque" target="_blank">
+            <IconsGithub />
+          </a>
           <h6>Documentation :</h6>
-          <a href="" :download="ProjeBibliotheque"><IconsPdf /></a>
+          <a href="" :download="ProjeBibliotheque">
+            <IconsPdf />
+          </a>
         </div>
         <div>
           <h5>Projet Bibliotheque :</h5>
           <p>
             Ce projet consiste à créer une application mobile pour une
-            bibliothèque pouvant gérer des livres, des auteurs et des
-            utilisateurs et les lier. Il a été développé en utilisant Android
-            Studio avec Flutter et Dart pour répondre à la demande de la
-            bibliothèque.
+            bibliothèque pouvant gérer des livres, des auteurs et des utilisateurs
+            et les lier. Il a été développé en utilisant Android Studio avec
+            Flutter et Dart pour répondre à la demande de la bibliothèque.
           </p>
           <h5>Ma mission :</h5>
           <ul>
-            <li> • <strong>CRUD : </strong>Création/Modification/Suppression Livre, Auteur et Utilisateur</li>
+            <li>
+              • <strong>CRUD :</strong>Création/Modification/Suppression Livre, Auteur et Utilisateur
+            </li>
+            <li>
+              • <strong>Accès Utilisateur :</strong>Avoir un accès restraint pour les utilisateurs et un accès plein
+              pour les admins
+            </li>
+            <li>
+              • <strong>Gérer les images :</strong>Mettre une jacket sur un livre
+            </li>
           </ul>
         </div>
       </div>

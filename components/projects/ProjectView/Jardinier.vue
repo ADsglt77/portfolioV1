@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import ProjetJardinier from "/projects/pdf/ProjetJardinier.pdf";
+import ProjeBibliotheque from "/projects/pdf/ProjetBibliotheque.pdf";
 const emit = defineEmits(["close"]);
-
 </script>
 
 <template>
@@ -9,43 +8,46 @@ const emit = defineEmits(["close"]);
     <div class="content">
       <IconsArrowBack @click="emit('close')" />
       <div class="title">
-        <h1>PROJET JARDINIER</h1>
-        <h5>Dart + Android Studio</h5>
+        <h3>PROJET JARDINIER</h3>
+        <h5>PHP + Symfony</h5>
       </div>
-      <div></div>
-    </div>
-    <hr />
-    <div class="description">
-      <div class="info">
-        <h2>Repositorie :</h2>
-        <a href="https://github.com/ADsglt77/bibliotheque" target="_blank">
-          <IconsGithub />
-        </a>
-        <h2>Documentation :</h2>
-        <a :href="ProjetJardinier" download>
-          <ProjectsIconsPdf />
-        </a>
-      </div>
-      <div class="texte">
-        <h1>Projet Bibliotheque</h1>
-        <p>
-          Ce projet consiste à créer une application mobile pour une
-          bibliothèque pouvant gérer des livres, des auteurs et des utilisateurs
-          et les lier. Il a été développé en utilisant Android Studio avec
-          Flutter et Dart pour répondre à la demande de la bibliothèque.
-        </p>
-        <h2>Ma mission :</h2>
-        <ul>
-          <li>
-            • <strong>CRUD :</strong>Création/Modification/Suppression Livre, Auteur et Utilisateur
-          </li>
-          <li>
-            • <strong>Accès Utilisateur :</strong>Avoir un accès restraint pour les utilisateurs et un accès plein pour les admins
-          </li>
-          <li>
-            • <strong>Gérer les images :</strong>Mettre une jacket sur un livre
-          </li>
-        </ul>
+      <div class="line"></div>
+      <div class="description">
+        <div>
+          <h6>Repositorie :</h6>
+          <a href="https://github.com/ADsglt77/bibliotheque" target="_blank">
+            <IconsGithub />
+          </a>
+          <h6>Documentation :</h6>
+          <a href="" :download="ProjeBibliotheque">
+            <IconsPdf />
+          </a>
+        </div>
+        <div>
+          <h5>Le P'tit jardinier</h5>
+          <p>
+            Cet atelier professionnel a pour but de réaliser une application web,
+            à l’aide du Framework PHP Symfony. Cette application reprend le
+            contexte d’un site de jardinerie, qui doit permettre de pourvoir créer
+            des devis avec un ou plusieurs taillages de haies dans le même devis.
+          </p>
+          <h2>Ma mission :</h2>
+          <ul>
+            <li>
+              • <strong>Gestion des devis :</strong> saisie
+              entreprise/particulier, saisie du type et de la dimenssion de la
+              haie
+            </li>
+            <li>
+              • <strong>Gestion des haies et catégories :</strong>
+              recherche/ajout/modification/suppression
+            </li>
+            <li>
+              • <strong>Gestion des clients :</strong>
+              recherche/ajout/modification/suppression des clients
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -67,7 +69,7 @@ const emit = defineEmits(["close"]);
 }
 
 .modal .line {
-  width: 95%;
+  width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   grid-column: 1 / -1;
   margin: 20px 0;
@@ -75,8 +77,29 @@ const emit = defineEmits(["close"]);
 
 .modal .content {
   width: 70%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.modal .title h3,
+.modal .title h5 {
+  text-align: center;
+}
+
+.modal h5 {
+  font-weight: 300;
+  color: #47d67e;
+}
+
+.modal .description {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
   gap: 20px;
+}
+
+.modal .description div a svg {
+  margin: 10px;
 }
 </style>

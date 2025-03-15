@@ -9,8 +9,8 @@ const emit = defineEmits(["close"]);
     <div class="content">
       <IconsArrowBack @click="emit('close')" />
       <div class="title">
-        <h1>PROJET CONGRES</h1>
-        <h5>Dart + Android Studio</h5>
+        <h3>PROJET CONGRES</h3>
+        <h5>PHP-OBJET / MySQL + MVC</h5>
       </div>
       <div></div>
     </div>
@@ -27,23 +27,16 @@ const emit = defineEmits(["close"]);
         </a>
       </div>
       <div class="texte">
-        <h1>Projet Bibliotheque</h1>
+        <h5>Projet Congres</h5>
         <p>
-          Ce projet consiste à créer une application mobile pour une
-          bibliothèque pouvant gérer des livres, des auteurs et des utilisateurs
-          et les lier. Il a été développé en utilisant Android Studio avec
-          Flutter et Dart pour répondre à la demande de la bibliothèque.
+          description
         </p>
         <h2>Ma mission :</h2>
         <ul>
           <li>
-            • <strong>CRUD :</strong>Création/Modification/Suppression Livre, Auteur et Utilisateur
-          </li>
-          <li>
-            • <strong>Accès Utilisateur :</strong>Avoir un accès restraint pour les utilisateurs et un accès plein pour les admins
-          </li>
-          <li>
-            • <strong>Gérer les images :</strong>Mettre une jacket sur un livre
+            • <strong>Liste</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repellendus eligendi
+            tenetur facilis iste numquam facere reiciendis, blanditiis consequuntur accusantium, velit fuga suscipit
+            doloribus amet debitis? Maxime velit tempore at!
           </li>
         </ul>
       </div>
