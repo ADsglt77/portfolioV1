@@ -24,14 +24,14 @@ const emit = defineEmits(["close"]);
           </a>
         </div>
         <div>
-          <h5>Le P'tit jardinier</h5>
+          <h5>Ma mission :</h5>
           <p>
             Cet atelier professionnel a pour but de réaliser une application web,
             à l’aide du Framework PHP Symfony. Cette application reprend le
             contexte d’un site de jardinerie, qui doit permettre de pourvoir créer
             des devis avec un ou plusieurs taillages de haies dans le même devis.
           </p>
-          <h2>Ma mission :</h2>
+          <h5>Ma mission :</h5>
           <ul>
             <li>
               • <strong>Gestion des devis :</strong> saisie

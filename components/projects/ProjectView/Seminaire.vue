@@ -28,7 +28,7 @@ const emit = defineEmits(["close"]);
           <p>
             description
           </p>
-          <h2>Ma mission :</h2>
+          <h5>Ma mission :</h5>
           <ul>
             <li>
               • <strong>Liste</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repellendus
