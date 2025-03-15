@@ -2,6 +2,7 @@
 import ProjetJardinier from "/projects/pdf/ProjetJardinier.pdf";
 import ProjetResto from "/projects/pdf/ProjetResto.pdf";
 
+import ImageCondat from "/projects/img/Condat.png";
 import ImageResto from "/projects/img/Resto.png";
 import ImageCongres from "/projects/img/Congres.png";
 import ImageJardinier from "/projects/img/Jardinier.png";
@@ -10,6 +11,20 @@ import ImageBibliotheque from "/projects/img/Bibliotheque.png";
 import { ProjectsProjectViewBibliotheque } from "#components";
 
 const projects = [
+{
+    image: ImageCondat,
+    title: "Projet BASKET",
+    description: "NuxtJs + TypeScript + Prisma",
+    documentation: ProjetJardinier,
+    modalType: "ProjetCondat",
+  },
+  {
+    image: ImageBibliotheque,
+    title: "Projet FLUTTER",
+    description: "Dart + Android Studio",
+    documentation: ProjetJardinier,
+    modalType: "ProjetBibliotheque",
+  },
   {
     image: ImageJardinier,
     title: "Projet JARDINIER",
@@ -23,13 +38,6 @@ const projects = [
     description: "PHP / MySQL + archi MVC",
     documentation: ProjetResto,
     modalType: "ProjetResto",
-  },
-  {
-    image: ImageBibliotheque,
-    title: "Projet FLUTTER",
-    description: "Dart + Android Studio",
-    documentation: ProjetJardinier,
-    modalType: "ProjetBibliotheque",
   },
   {
     image: ImageCongres,
@@ -72,6 +80,7 @@ function prevCard() {
   activeCardIndex.value--;
 }
 
+const modalCondatVisible = ref<boolean>(false);
 const modalJardinierVisible = ref<boolean>(false);
 const modalRestoVisible = ref<boolean>(false);
 const modalBibliothequeVisible = ref<boolean>(false);
@@ -80,13 +89,16 @@ const modalSeminaireVisible = ref<boolean>(false);
 
 function showModal(
   modalType:
+    | "ProjetCondat"
     | "ProjetJardinier"
     | "ProjetResto"
     | "ProjetBibliotheque"
     | "ProjetCongres"
     | "ProjetSeminaire"
 ): void {
-  if (modalType === "ProjetJardinier") {
+  if (modalType === "ProjetCondat") {
+    modalCondatVisible.value = true;
+  } else if (modalType === "ProjetJardinier") {
     modalJardinierVisible.value = true;
   } else if (modalType === "ProjetResto") {
     modalRestoVisible.value = true;
@@ -100,6 +112,7 @@ function showModal(
 }
 
 function hideModals(): void {
+  modalCondatVisible.value = false;
   modalJardinierVisible.value = false;
   modalRestoVisible.value = false;
   modalBibliothequeVisible.value = false;
@@ -110,14 +123,14 @@ function hideModals(): void {
 
 <template>
   <div class="projects"
-    v-if="!modalJardinierVisible && !modalRestoVisible && !modalBibliothequeVisible && !modalCongresVisible && !modalSeminaireVisible">
+    v-if="!modalCondatVisible && !modalJardinierVisible && !modalRestoVisible && !modalBibliothequeVisible && !modalCongresVisible && !modalSeminaireVisible">
     <h3>Mes <span>Projets</span></h3>
     <div class="line"></div>
 
     <div class="carousel" ref="carouselRef">
       <ProjectsCard v-for="(project, index) in projects" :key="index" :image="project.image" :title="project.title"
         :description="project.description" :documentation="project.documentation"
-        @click="showModal(project.modalType as 'ProjetJardinier' | 'ProjetResto' | 'ProjetBibliotheque' | 'ProjetCongres' | 'ProjetSeminaire')"
+        @click="showModal(project.modalType as 'ProjetCondat' | 'ProjetJardinier' | 'ProjetResto' | 'ProjetBibliotheque' | 'ProjetCongres' | 'ProjetSeminaire')"
         class="carousel-item" />
     </div>
 
@@ -128,6 +141,7 @@ function hideModals(): void {
     </div>
   </div>
 
+  <ProjectsProjectViewCondat v-if="modalCondatVisible" @close="hideModals" />
   <ProjectsProjectViewJardinier v-if="modalJardinierVisible" @close="hideModals" />
   <ProjectsProjectViewResto v-if="modalRestoVisible" @close="hideModals" />
   <ProjectsProjectViewBibliotheque v-if="modalBibliothequeVisible" @close="hideModals" />
