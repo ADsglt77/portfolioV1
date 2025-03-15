@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from "vue";
+import { markRaw } from "vue";
 import TrainingCourse from "~/components/training/icons/course.vue";
 import TrainingSchool from "~/components/training/icons/school.vue";
 import TrainingModalCourseCondat from "~/components/training/modal/courseCondat.vue";
@@ -31,7 +32,7 @@ function hideModals(): void {
 
 const boxData = ref<BoxData[]>([
   {
-    icon: TrainingCourse,
+    icon: markRaw(TrainingCourse),
     title: "Stage (13 Janvier au 28 Février 2025)",
     descriptions: [
       "Entreprise : <a href='https://condatbasketclub.com/' target='_blank' style='color: #47d67e;'>Condat Basket Club</a><br>",
@@ -40,12 +41,12 @@ const boxData = ref<BoxData[]>([
     modalType: "condat",
   },
   {
-    icon: TrainingSchool,
+    icon: markRaw(TrainingSchool),
     title: "Lycée Suzanne Valadon (2024 - 2025)",
     descriptions: ["BTS SIO 2ème année • Option : SLAM"],
   },
   {
-    icon: TrainingCourse,
+    icon: markRaw(TrainingCourse),
     title: "Stage (27 Mai au 27 Juin 2024)",
     descriptions: [
       "Entreprise : <a href='https://www.broussaud.com/' target='_blank' style='color: #47d67e;'>Broussaud textiles</a><br>",
@@ -54,31 +55,31 @@ const boxData = ref<BoxData[]>([
     modalType: "broussaud",
   },
   {
-    icon: TrainingSchool,
+    icon: markRaw(TrainingSchool),
     title: "Lycée Suzanne Valadon (2023 - 2024)",
     descriptions: ["BTS SIO 1ère année • Option : SLAM"],
   },
   {
-    icon: TrainingSchool,
+    icon: markRaw(TrainingSchool),
     title: "Lycée Turgot (2022 - 2023)",
     descriptions: ["Terminale • Spécialités : NSI, Mathématiques"],
   },
   {
-    icon: TrainingCourse,
+    icon: markRaw(TrainingCourse),
     title: "Stage (1 au 7 Juin 2021)",
     descriptions: [
       "Entreprise : <a href='https://www.flexocolor-fr.com/' target='_blank' style='color: #47d67e;'>Flexocolor</a>",
     ],
   },
   {
-    icon: TrainingSchool,
+    icon: markRaw(TrainingSchool),
     title: "Lycée Turgot (2021 - 2022)",
     descriptions: [
       "Première • Spécialités : NSI, Mathématiques, Physique-Chimie",
     ],
   },
   {
-    icon: TrainingSchool,
+    icon: markRaw(TrainingSchool),
     title: "Lycée Turgot (2020 - 2021)",
     descriptions: ["Seconde • Option : SI-CIT"],
   },
