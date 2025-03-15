@@ -1,3 +1,13 @@
+<script lang="ts" setup>
+import { defineProps } from 'vue';
+
+defineProps({
+  title: String,
+  description: String,
+  icon: Object,
+});
+</script>
+
 <template>
   <div class="card">
     <p>{{ description }}</p>
@@ -9,14 +19,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-defineProps({
-  title: String,
-  description: String,
-  icon: Object,
-});
-</script>
 
 <style scoped>
 .card {
