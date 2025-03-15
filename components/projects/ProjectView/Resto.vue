@@ -13,7 +13,7 @@ const emit = defineEmits(["close"]);
       </div>
       <div class="line"></div>
       <div class="description">
-        <div>
+        <aside>
           <h6>Repositorie :</h6>
           <a href="https://github.com/ADsglt77/bibliotheque" target="_blank">
             <IconsGithub />
@@ -22,7 +22,13 @@ const emit = defineEmits(["close"]);
           <a href="" :download="ProjeBibliotheque">
             <IconsPdf />
           </a>
-        </div>
+          <h6>Technologies :</h6>
+          <div class="techno">
+            <ProjectsIconsIconPhp />
+            <ProjectsIconsIconMySql />
+            <ProjectsIconsIconCss />
+          </div>
+        </aside>
         <div>
           <h5>Projet R3st0</h5>
           <p>
@@ -99,7 +105,14 @@ const emit = defineEmits(["close"]);
   gap: 20px;
 }
 
-.modal .description div a svg {
-  margin: 10px;
+.modal .description aside h6 {
+  margin: 15px 0;
+}
+
+.modal .description .techno {
+  max-width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 </style>
