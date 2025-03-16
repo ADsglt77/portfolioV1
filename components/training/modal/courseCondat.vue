@@ -219,4 +219,22 @@ function selectWeek(week: Week) {
 .modal table th {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+@media (max-width: 1200px) {
+  .modal .content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .modal table {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal table {
+    width: 100%;
+  }
+}
 </style>

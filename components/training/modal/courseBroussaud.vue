@@ -308,7 +308,7 @@ function selectWeek(week: Week) {
   gap: 20px;
 }
 
-.modal .content > a:first-of-type {
+.modal .content>a:first-of-type {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -322,7 +322,7 @@ function selectWeek(week: Week) {
   transition: 0.3s;
 }
 
-.modal .content > a:first-of-type:hover {
+.modal .content>a:first-of-type:hover {
   background-color: rgba(32, 70, 11, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -356,5 +356,23 @@ function selectWeek(week: Week) {
 
 .modal table th {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .modal .content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .modal table {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal table {
+    width: 100%;
+  }
 }
 </style>
