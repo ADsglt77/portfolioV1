@@ -1,28 +1,23 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue';
 
-defineProps({
-  image: String,
-  title: String,
-  description: String,
-  documentation: String,
-  modalType: String,
-});
+const { project } = defineProps<{ project: Project }>()
+const router = useRouter()
 </script>
 
 <template>
-  <div class="card">
-    <img :src="image" :alt="title" class="card-image" />
-    <div class="content">
-      <h6>{{ title }}</h6>
-      <p>{{ description }}</p>
-    </div>
-    <div class="doc">
-      <a :href="documentation" download>
-        <ProjectsIconsDowload />
-      </a>
-    </div>
-  </div>
+	<div class="card" @click="() => router.push(`/projects/${project.id}`)">
+		<img :src="`/img/projects/${project.id}.png`" :alt="project.title" class="card-image" />
+		<div class="content">
+			<h6>{{ project.title }}</h6>
+			<p>{{ project.description }}</p>
+		</div>
+		<div class="doc" v-if="project.doc ?? true">
+			<a :href="`/pdf/projects/${project.id}.pdf`" download>
+				<ProjectsIconsDowload />
+			</a>
+		</div>
+	</div>
 </template>
 
 <style scoped>
@@ -32,6 +27,7 @@ defineProps({
   height: 250px;
   border-radius: 15px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card img {

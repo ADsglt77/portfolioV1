@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <img src="/background.png" id="background" alt="background" />
+  <img src="/img/background.png" id="background" alt="background" />
   <NavBar />
   <section>
     <NuxtPage />
