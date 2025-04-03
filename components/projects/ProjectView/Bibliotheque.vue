@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ProjeBibliotheque from "/projects/pdf/ProjetBibliotheque.pdf";
+const ProjeBibliotheque = "/projects/pdf/ProjeBibliotheque.pdf";
 const emit = defineEmits(["close"]);
 </script>
 
@@ -14,16 +14,17 @@ const emit = defineEmits(["close"]);
       <div class="line"></div>
       <div class="description">
         <aside>
-          <h6>Repositorie :</h6>
-          <a href="https://github.com/ADsglt77/bibliotheque" target="_blank">
+          <h6>Important :</h6>
+          <div>
+            <a href="https://github.com/ADsglt77/bibliotheque" target="_blank">
             <IconsGithub />
           </a>
-          <h6>Documentation :</h6>
-          <a href="" :download="ProjeBibliotheque">
+          <a :href="ProjeBibliotheque" :download="ProjeBibliotheque">
             <IconsPdf />
           </a>
+          </div>
           <h6>Technologies :</h6>
-          <div class="techno">
+          <div>
             <ProjectsIconsIconAndroidStudio />
             <ProjectsIconsIconFlutter />
             <ProjectsIconsIconDart />
@@ -33,23 +34,13 @@ const emit = defineEmits(["close"]);
           <h5>Projet Bibliotheque :</h5>
           <p>
             Ce projet consiste à créer une application mobile pour une
-            bibliothèque pouvant gérer des livres, des auteurs et des utilisateurs
-            et les lier. Il a été développé en utilisant Android Studio avec
-            Flutter et Dart pour répondre à la demande de la bibliothèque.
+            bibliothèque pouvant gérer des livres, des auteurs et des
+            utilisateurs et les lier. Il a été développé en utilisant Android
+            Studio avec Flutter et Dart pour répondre à la demande de la
+            bibliothèque.
           </p>
-          <h5>Ma mission :</h5>
-          <ul>
-            <li>
-              • <strong>CRUD :</strong>Création/Modification/Suppression Livre, Auteur et Utilisateur
-            </li>
-            <li>
-              • <strong>Accès Utilisateur :</strong>Avoir un accès restraint pour les utilisateurs et un accès plein
-              pour les admins
-            </li>
-            <li>
-              • <strong>Gérer les images :</strong>Mettre une jacket sur un livre
-            </li>
-          </ul>
+          <h5>Le Projet :</h5>
+          <video src=""></video>
         </div>
       </div>
     </div>
@@ -106,7 +97,7 @@ const emit = defineEmits(["close"]);
   margin: 15px 0;
 }
 
-.modal .description .techno {
+.modal .description aside div {
   max-width: fit-content;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

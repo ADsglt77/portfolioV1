@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const ProjetCondat = "/projects/pdf/ProjetBasket.pdf";
 const emit = defineEmits(["close"]);
 
 interface Horaire {
@@ -8,18 +9,6 @@ interface Horaire {
     matin: string;
     apresMidi: string;
   }[];
-}
-
-interface Jour {
-  jour: string;
-  titre: string;
-  description: string;
-}
-
-interface Week {
-  semaine: string;
-  dates: string;
-  jours: Jour[];
 }
 
 const horaires: Horaire = {
@@ -32,54 +21,6 @@ const horaires: Horaire = {
     { jour: "Vendredi", matin: "9h-12h", apresMidi: "13h-17h" },
   ],
 };
-
-const weekData = ref<Week[]>([
-  {
-    semaine: "Semaine 1",
-    dates: "Du 13 Janvier au 17 Janvier",
-    jours: [
-      {
-        jour: "Lundi",
-        titre: "",
-        description: " • ",
-      },
-      {
-        jour: "Mardi",
-        titre: "",
-        description: " • ",
-      },
-      {
-        jour: "Mercredi",
-        titre: "",
-        description: " • ",
-      },
-      {
-        jour: "Jeudi",
-        titre: "",
-        description: " • ",
-      },
-      {
-        jour: "Vendredi",
-        titre: "",
-        description: " • ",
-      },
-    ],
-  },
-]);
-
-const selectedWeek = ref<Week | null>(null);
-const content = ref<HTMLElement | null>(null);
-
-function selectWeek(week: Week) {
-  selectedWeek.value = week;
-  setTimeout(() => {
-    if (content.value)
-      content.value.scrollTo({
-        top: content.value.scrollHeight,
-        behavior: "smooth",
-      });
-  }, 0);
-}
 </script>
 
 <template>
@@ -122,16 +63,10 @@ function selectWeek(week: Week) {
         <IconsGithub />
         <p>VOIR LE REPO GITHUB</p>
       </a>
-      <h6>Semaines de stage :</h6>
-      <ul>
-        <li v-for="(week, index) in weekData" :key="index">
-          <a href="#" @click.prevent="selectWeek(week)" :id="week.semaine">{{
-            week.semaine
-          }}</a>
-          : {{ week.dates }}
-        </li>
-      </ul>
-      <TrainingModalSemaines :week="selectedWeek" v-if="selectedWeek" />
+      <h6>La documentation :</h6>
+                    <a :href="ProjetCondat" :download="ProjetCondat">
+                        <IconsPdf />
+                    </a>
     </div>
   </div>
 </template>

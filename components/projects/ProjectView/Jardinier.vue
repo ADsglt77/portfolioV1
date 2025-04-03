@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ProjeBibliotheque from "/projects/pdf/ProjetBibliotheque.pdf";
+const ProjetJardinier = "/projects/pdf/ProjetJardinier.pdf";
 const emit = defineEmits(["close"]);
 </script>
 
@@ -14,14 +14,15 @@ const emit = defineEmits(["close"]);
       <div class="line"></div>
       <div class="description">
         <aside>
-          <h6>Repositorie :</h6>
-          <a href="https://github.com/ADsglt77/bibliotheque" target="_blank">
-            <IconsGithub />
-          </a>
-          <h6>Documentation :</h6>
-          <a href="" :download="ProjeBibliotheque">
-            <IconsPdf />
-          </a>
+          <h6>Important :</h6>
+          <div>
+            <a href="https://github.com/ADsglt77/jardinier" target="_blank">
+              <IconsGithub />
+            </a>
+            <a :href="ProjetJardinier" :download="ProjetJardinier">
+              <IconsPdf />
+            </a>
+          </div>
           <h6>Technologies :</h6>
           <div class="techno">
             <ProjectsIconsIconSymfony />
@@ -30,29 +31,16 @@ const emit = defineEmits(["close"]);
           </div>
         </aside>
         <div>
-          <h5>Ma mission :</h5>
+          <h5>Présentation du Projet :</h5>
           <p>
-            Cet atelier professionnel a pour but de réaliser une application web,
-            à l’aide du Framework PHP Symfony. Cette application reprend le
-            contexte d’un site de jardinerie, qui doit permettre de pourvoir créer
-            des devis avec un ou plusieurs taillages de haies dans le même devis.
+            Cet atelier professionnel a pour but de réaliser une application
+            web, à l’aide du Framework PHP Symfony. Cette application reprend le
+            contexte d’un site de jardinerie, qui doit permettre de pourvoir
+            créer des devis avec un ou plusieurs taillages de haies dans le même
+            devis.
           </p>
-          <h5>Ma mission :</h5>
-          <ul>
-            <li>
-              • <strong>Gestion des devis :</strong> saisie
-              entreprise/particulier, saisie du type et de la dimenssion de la
-              haie
-            </li>
-            <li>
-              • <strong>Gestion des haies et catégories :</strong>
-              recherche/ajout/modification/suppression
-            </li>
-            <li>
-              • <strong>Gestion des clients :</strong>
-              recherche/ajout/modification/suppression des clients
-            </li>
-          </ul>
+          <h5>Le Projet :</h5>
+          <video src=""></video>
         </div>
       </div>
     </div>
@@ -109,7 +97,7 @@ const emit = defineEmits(["close"]);
   margin: 15px 0;
 }
 
-.modal .description .techno {
+.modal .description aside div {
   max-width: fit-content;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

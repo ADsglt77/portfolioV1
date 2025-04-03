@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ProjeBibliotheque from "/projects/pdf/ProjetBibliotheque.pdf";
+const ProjeBibliotheque = "/projects/pdf/ProjeBibliotheque.pdf";
 const emit = defineEmits(["close"]);
 </script>
 
@@ -14,16 +14,17 @@ const emit = defineEmits(["close"]);
       <div class="line"></div>
       <div class="description">
         <aside>
-          <h6>Repositorie :</h6>
-          <a href="https://github.com/ADsglt77/bibliotheque" target="_blank">
-            <IconsGithub />
-          </a>
-          <h6>Documentation :</h6>
-          <a href="" :download="ProjeBibliotheque">
-            <IconsPdf />
-          </a>
+          <h6>Important :</h6>
+          <div>
+            <a href="https://github.com/ADsglt77/resto" target="_blank">
+              <IconsGithub />
+            </a>
+            <a :href="ProjeBibliotheque" :download="ProjeBibliotheque">
+              <IconsPdf />
+            </a>
+          </div>
           <h6>Technologies :</h6>
-          <div class="techno">
+          <div>
             <ProjectsIconsIconPhp />
             <ProjectsIconsIconMySql />
             <ProjectsIconsIconCss />
@@ -32,27 +33,12 @@ const emit = defineEmits(["close"]);
         <div>
           <h5>Projet R3st0</h5>
           <p>
-            Ce projet consiste à créer un site web pour un restaurant où l'on peut
-            se connecter, liker des restaurants, mettre des commentaires et
+            Ce projet consiste à créer un site web pour un restaurant où l'on
+            peut se connecter, liker des restaurants, mettre des commentaires et
             rechercher les restaurants selon certains critères.
           </p>
-          <h2>Ma mission :</h2>
-          <ul>
-            <li>
-              • <strong>Connexion/Inscription :</strong>
-              Fonction pour s'inscrire et se connecter
-            </li>
-
-            <li>
-              • <strong>Like/Commentaire :</strong>
-              Fonction pour liker et commenter un restaurant
-            </li>
-
-            <li>
-              • <strong>Rechercher :</strong>
-              Fonction pour rechercher un restaurant selon certains critères
-            </li>
-          </ul>
+          <h5>Le Projet :</h5>
+          <video src=""></video>
         </div>
       </div>
     </div>
@@ -109,7 +95,7 @@ const emit = defineEmits(["close"]);
   margin: 15px 0;
 }
 
-.modal .description .techno {
+.modal .description aside div {
   max-width: fit-content;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
