@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { default as projects } from "@/assets/projects.json" assert { type: 'json' }
+import p from "@/assets/projects.json"
+const projects = p as Array<Project>
 
 const carouselRef = ref<HTMLElement | null>(null);
 const activeCardIndex = ref(0);
