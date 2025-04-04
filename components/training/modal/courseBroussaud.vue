@@ -262,7 +262,7 @@ function selectWeek(week: Week) {
       </table>
       <h6>Tout les projets sont disponibles ici :</h6>
       <a href="https://github.com/ADsglt77/broussaud" target="_blank">
-        <IconsGithub />
+        <img src="/img/icons/github.svg" alt="" />
         <p>VOIR LE REPO GITHUB</p>
       </a>
       <h6>Semaines de stage :</h6>

@@ -27,7 +27,7 @@ if (!projectData) router.push("/projects")
 							<img :src="`/img/icons/${imp.icon}.svg`" alt="" />
 						</a>
 						<a v-if="projectData?.doc ?? true" target="_blank" download :href="`/pdf/projects/${projectData?.id}.pdf`">
-							<img src="`/img/icons/pdf.svg`" alt="" />
+							<img src="/img/icons/pdf.svg" alt="" />
 						</a>
 					</div>
 					<h6>Technologies :</h6>

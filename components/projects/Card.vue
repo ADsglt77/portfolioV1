@@ -14,7 +14,7 @@ const router = useRouter()
 		</div>
 		<div class="doc" v-if="project.doc ?? true">
 			<a :href="`/pdf/projects/${project.id}.pdf`" download>
-				<ProjectsIconsDowload />
+				<img src="/img/icons/download.svg" alt="" />
 			</a>
 		</div>
 	</div>

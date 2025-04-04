@@ -60,13 +60,13 @@ const horaires: Horaire = {
       </table>
       <h6>Tout les projets sont disponibles ici :</h6>
       <a href="https://github.com/Condat-Basket-Club" target="_blank">
-        <IconsGithub />
+        <img src="/img/icons/github.svg" alt="" />
         <p>VOIR LE REPO GITHUB</p>
       </a>
       <h6>La documentation :</h6>
-                    <a :href="ProjetCondat" :download="ProjetCondat">
-                        <IconsPdf />
-                    </a>
+      <a :href="ProjetCondat" :download="ProjetCondat">
+        <img src="/img/icons/pdf.svg" alt="" />
+      </a>
     </div>
   </div>
 </template>
