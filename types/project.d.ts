@@ -2,7 +2,7 @@ interface Project {
 	id: string;
 	title: string;
 	description: string;
-	doc?: boolean;
+	doc?: boolean; // Default: true
 	techno: string;
 	imp: Array<{
 		icon: string;

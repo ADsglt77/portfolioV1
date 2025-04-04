@@ -10,7 +10,7 @@ const router = useRouter()
 		<img :src="`/img/projects/${project.id}.png`" :alt="project.title" class="card-image" />
 		<div class="content">
 			<h6>{{ project.title }}</h6>
-			<p>{{ project.description }}</p>
+			<p>{{ project.techno }}</p>
 		</div>
 		<div class="doc" v-if="project.doc ?? true">
 			<a :href="`/pdf/projects/${project.id}.pdf`" download>

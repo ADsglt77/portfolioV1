@@ -39,7 +39,7 @@ function prevCard() {
 
 		<div class="nav">
 			<ProgressBarLeft @click="prevCard" />
-			<ProgressBar :activeCard="activeCardIndex + 1" :cardNumber="projects.length - 2" />
+			<ProgressBar :activeCard="activeCardIndex + 1" :cardNumber="projects.length" />
 			<ProgressBarRight @click="nextCard" />
 		</div>
 	</div>

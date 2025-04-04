@@ -1,32 +1,26 @@
 [
-    {
-        "id": "condat",
-        "title": "Projet BASKET",
-        "description": "NuxtJs + TypeScript + Prisma"
+  {
+    "id": "condat",
+    "title": "Projet BASKET",
+    "description": "Ce projet consiste à créer un site vitrine pour le Club de Basket de Condat. Il mettra en avant les valeurs du club, ses licenciés et ses produits. Avec ce site vitrine un Dashboard sera développé pour les gérants du club, il permettra la mise à jour du site facilement et rapidement. Pour cela j’utiliserai le Framework [NuxtJS](https://nuxt.com)",
+    "techno": "NuxtJs + TypeScript + Prisma",
+    "imp": [
+      {
+        "icon": "github",
+        "link": "https://github.com/your-repo"
       },
       {
-        "id": "bibliotheque",
-        "title": "Projet FLUTTER",
-        "description": "Dart + Android Studio"
-      },
-      {
-        "id": "jardinier",
-        "title": "Projet JARDINIER",
-        "description": "PHP / SYMFONY + Framework"
-      },
-      {
-        "id": "resto",
-        "title": "Projet R3st0",
-        "description": "PHP / MySQL + archi MVC"
-      },
-      {
-        "id": "congres",
-        "title": "Projet CONGRES ANALIM",
-        "description": "PHP-OBJET / MySQL + archi MVC"
-      },
-      {
-        "id": "seminaire",
-        "title": "Projet SEMINAIRE",
-        "description": "PHP / API REST + archi MVC"
+        "icon": "website",
+        "link": "https://condat.example.com"
       }
+    ],
+    "techI": [
+      "ts",
+      "nuxt",
+      "prisma",
+      "css",
+      "cloudflare",
+      "docker"
+    ]
+  }
 ]
