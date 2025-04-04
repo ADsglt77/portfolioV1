@@ -41,13 +41,17 @@ const textErasing = () => {
     }, 50);
 };
 
-textTyping();
+onMounted(() => {
+    textTyping();
+});
 </script>
 
 <template>
-    <h3>SEGALAT ADRIEN</h3>
-    <h5>Je suis <span>{{ msg }}</span></h5>
-    <router-link to="/contact" exact-active-class="active">Prendre Contact</router-link>
+	<h3>SEGALAT ADRIEN</h3>
+	<h5>
+		Je suis <span>{{ msg }}</span>
+	</h5>
+	<router-link to="/contact" exact-active-class="active">Prendre Contact</router-link>
 </template>
 
 <style scoped>
