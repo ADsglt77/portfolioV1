@@ -1,28 +1,22 @@
-<script lang="ts" setup>
-import cvFile from "/CV.pdf";
-</script>
+<script lang="ts" setup></script>
 
 <template>
-    <div class="about">
-        <img src="/profil.jpeg" alt="">
-        <div>
-            <h3>SEGALAT <span>ADRIEN</span></h3>
-            <div class="line"></div>
-            <p>
-                Je suis étudiant en BTS SIO (SLAM), passionné par le développement web,
-                le design, et grand amateur de basket-ball. Créatif et curieux, j’aime
-                allier technique et esthétique dans mes projets.
-            </p>
-            <div>
-                <router-link to="/contact" class="router-link">
-                    <p>Prendre Contact</p>
-                </router-link>
-                <a :href="cvFile" download>
-                    <p>Télécharger le CV</p>
-                </a>
-            </div>
-        </div>
-    </div>
+	<div class="about">
+		<img src="/profil.jpeg" alt="" />
+		<div>
+			<h3>SEGALAT <span>ADRIEN</span></h3>
+			<div class="line"></div>
+			<p>Je suis étudiant en BTS SIO (SLAM), passionné par le développement web, le design, et grand amateur de basket-ball. Créatif et curieux, j’aime allier technique et esthétique dans mes projets.</p>
+			<div>
+				<router-link to="/contact" class="router-link">
+					<p>Prendre Contact</p>
+				</router-link>
+				<a href="/pdf/CV.pdf" download>
+					<p>Télécharger le CV</p>
+				</a>
+			</div>
+		</div>
+	</div>
 </template>
 
 <style scoped>
@@ -94,7 +88,7 @@ import cvFile from "/CV.pdf";
     }
 
     .about div div a {
-        
+
         margin: 0 auto;
     }
 }
