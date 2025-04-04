@@ -1,30 +1,69 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+
+const name = ref<string>('')
+const email = ref<string>('')
+const message = ref<string>('')
+const token = ref<string>('')
+
+function send() {
+  if (!name.value || !email.value || !message.value) {
+    alert('Veuillez remplir tous les champs.')
+    return
+  }
+
+  $fetch('/api/contact', {
+    method: 'POST',
+    body: {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+      token: token.value,
+    },
+  })
+    .then(() => {
+      alert('Votre message a été envoyé avec succès.')
+      name.value = ''
+      email.value = ''
+      message.value = ''
+    })
+    .catch((error) => {
+      console.error(error)
+      alert('Une erreur est survenue lors de l\'envoi du message.')
+    })
+    .finally(() => {
+      name.value = ''
+      email.value = ''
+      message.value = ''
+    })
+}
+</script>
 
 <template>
-  <div class="contact">
-    <h3>Me <span>Contacter</span></h3>
-    <div class="line"></div>
-    <div class="form">
-      <div class="social">
-        <ContactIconsMap />
-        <p>Verneuil-Sur-Vienne</p>
-        <ContactIconsMail />
-        <p>adrien.segalat@gmail.com</p>
-        <ContactIconsPhone />
-        <p>06 33 61 58 46</p>
-        <ContactIconsLinkedin />
-        <p>@adsglt</p>
-      </div>
-      <form>
-        <div>
-          <input type="text" placeholder="Nom" />
-          <input type="email" placeholder="Email" />
-        </div>
-        <textarea placeholder="Message"></textarea>
-        <button>ENVOYER</button>
-      </form>
-    </div>
-  </div>
+	<div class="contact">
+		<h3>Me <span>Contacter</span></h3>
+		<div class="line"></div>
+		<div class="form">
+			<div class="social">
+				<ContactIconsMap />
+				<p>Verneuil-Sur-Vienne</p>
+				<ContactIconsMail />
+				<p>adrien.segalat@gmail.com</p>
+				<ContactIconsPhone />
+				<p>06 33 61 58 46</p>
+				<ContactIconsLinkedin />
+				<p>@adsglt</p>
+			</div>
+			<form @submit.prevent="send">
+				<div>
+					<input type="text" placeholder="Nom" v-model="name" />
+					<input type="email" placeholder="Email" v-model="email" />
+				</div>
+				<textarea placeholder="Message" v-model="message"></textarea>
+        <NuxtTurnstile v-model="token" />
+				<button type="submit">ENVOYER</button>
+			</form>
+		</div>
+	</div>
 </template>
 
 <style scoped>
