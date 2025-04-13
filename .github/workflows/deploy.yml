@@ -1,0 +1,57 @@
+name: Portfolio Deploy
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout deployment branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install Dependencies
+        run: pnpm install --no-frozen-lockfile
+        shell: bash
+
+      - name: Build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run build
+        shell: bash
+
+      - name: PM2 Config
+        run: |
+          cp ecosystem.config.cjs .output/
+        shell: bash
+
+      - name: Install rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
+      - name: Deploy to Server using rsync
+        env:
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_IP: ${{ secrets.REMOTE_IP }}
+          SSH_PORT: 22
+          SSH_USER: ${{ secrets.REMOTE_USER }}
+        run: |
+          echo "$SSH_KEY" > ssh_key
+          chmod 600 ssh_key
+          # Vérifier si rsync est installé sur le VPS, sinon l'installer
+          ssh -o StrictHostKeyChecking=no -i ssh_key -p $SSH_PORT $SSH_USER@$SSH_IP "command -v rsync || (sudo apt-get update && sudo apt-get install -y rsync)"
+          rsync -az --delete -e "ssh -o StrictHostKeyChecking=no -i ssh_key -p $SSH_PORT" .output/ $SSH_USER@$SSH_IP:/root/landing/
+          ssh -o StrictHostKeyChecking=no -i ssh_key -p $SSH_PORT $SSH_USER@$SSH_IP "cd /root/landing && pm2 restart all && pm2 save"
+          rm ssh_key
