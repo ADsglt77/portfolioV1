@@ -7,7 +7,7 @@
     "imp": [
       {
         "icon": "github",
-        "link": "https://github.com/your-repo"
+        "link": "https://github.com/Condat-Basket-Club"
       },
       {
         "icon": "website",
@@ -32,10 +32,9 @@
     "imp": [
       {
         "icon": "github",
-        "link": "https://github.com/your-repo"
+        "link": "https://github.com/ADsglt77/bibliotheque"
       }
     ],
-    "doc": false,
     "techI": [
       "dart",
       "flutter",
@@ -50,10 +49,9 @@
     "imp": [
       {
         "icon": "github",
-        "link": "https://github.com/your-repo"
+        "link": "https://github.com/ADsglt77/jardinierV2"
       }
     ],
-    "doc": false,
     "techI": [
       "php",
       "symfony",
@@ -68,7 +66,7 @@
     "imp": [
       {
         "icon": "github",
-        "link": "https://github.com/your-repo"
+        "link": "https://github.com/ADsglt77/congres"
       }
     ],
     "doc": false,
@@ -86,7 +84,7 @@
     "imp": [
       {
         "icon": "github",
-        "link": "https://github.com/your-repo"
+        "link": "https://github.com/ADsglt77/r3st0"
       }
     ],
     "doc": false,
@@ -104,7 +102,7 @@
     "imp": [
       {
         "icon": "github",
-        "link": "https://github.com/your-repo"
+        "link": "https://github.com/ADsglt77/seminaire"
       }
     ],
     "doc": false,
