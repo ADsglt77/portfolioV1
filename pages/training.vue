@@ -151,6 +151,9 @@ const boxData = ref<BoxData[]>([
 
 @media (max-width: 1000px) {
   .training {
+    width: 90%;
+  }
+  .training {
     grid-template-columns: 1fr;
   }
 }

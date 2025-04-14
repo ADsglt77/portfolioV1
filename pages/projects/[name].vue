@@ -102,4 +102,16 @@ if (!projectData) router.push("/projects")
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
+
+@media (max-width: 1000px) {
+	.modal .content {
+		width: 95%;
+		max-width: 1200px;
+	}
+
+	.modal .description {
+		display: flex;
+		flex-direction: column;
+	}
+}
 </style>

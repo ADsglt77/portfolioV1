@@ -95,4 +95,12 @@ a {
 a:hover {
     background: #27ac5a;
 }
+
+@media (max-width: 1200px) {
+  h5 span::before {
+    height: 1rem;
+    width: 0.12rem;
+    right: -6px;
+  }
+}
 </style>
