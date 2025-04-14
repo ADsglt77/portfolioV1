@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import { defineProps } from 'vue';
-
-// Définition des types
 interface Jour {
   jour: string;
   titre: string;

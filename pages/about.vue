@@ -2,7 +2,7 @@
 
 <template>
 	<div class="about">
-		<img src="/profil.jpeg" alt="" />
+		<img src="/profil.jpg" alt="" />
 		<div>
 			<h3>SEGALAT <span>ADRIEN</span></h3>
 			<div class="line"></div>
@@ -34,6 +34,7 @@
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
+    filter: brightness(0.8);
 }
 
 .about div {
