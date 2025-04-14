@@ -13,7 +13,7 @@ jobs:
       - name: Checkout deployment branch
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: master
 
       - name: Set up Node
         uses: actions/setup-node@v4
