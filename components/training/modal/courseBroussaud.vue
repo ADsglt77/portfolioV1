@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { ref, nextTick } from 'vue';
 const emit = defineEmits(["close"]);
 
 interface Horaire {
@@ -214,19 +215,32 @@ const content = ref<HTMLElement | null>(null);
 
 function selectWeek(week: Week) {
   selectedWeek.value = week;
-  setTimeout(() => {
-    if (content.value)
-      content.value.scrollTo({
-        top: content.value.scrollHeight,
-        behavior: "smooth",
-      });
-  }, 0);
+  
+  // Utiliser nextTick pour s'assurer que le DOM est mis à jour
+  nextTick(() => {
+    // Attendre un court instant pour s'assurer que le composant est rendu
+    setTimeout(() => {
+      // Essayer de trouver l'élément par son ID
+      const semaineElement = document.getElementById(`semaine-${week.semaine.replace(/\s+/g, '-')}`);
+      
+      if (semaineElement) {
+        // Défiler jusqu'à l'élément avec une animation fluide
+        semaineElement.scrollIntoView({ behavior: "smooth" });
+      } else if (content.value) {
+        // Solution de secours: défiler vers le bas
+        content.value.scrollTo({
+          top: content.value.scrollHeight,
+          behavior: "smooth"
+        });
+      }
+    }, 100);
+  });
 }
 </script>
 
 <template>
   <div class="modal">
-    <div class="content">
+    <div class="content" ref="content">
       <IconsArrowBack @click="emit('close')" />
       <div>
         <h1>BROUSSAUD</h1>
@@ -268,7 +282,7 @@ function selectWeek(week: Week) {
       <h6>Semaines de stage :</h6>
       <ul>
         <li v-for="(week, index) in weekData" :key="index">
-          <a href="#" @click.prevent="selectWeek(week)" :id="week.semaine">{{
+          <a href="#" @click.prevent="selectWeek(week)" :id="`semaine-${week.semaine.replace(/\s+/g, '-')}`">{{
             week.semaine
           }}</a>
           : {{ week.dates }}

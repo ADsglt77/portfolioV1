@@ -9,38 +9,38 @@ import { ref } from "vue";
 const projects = [
   {
     description:
-      "Je suis abonné aux mises à jour d’OpenAI pour suivre l’évolution des modèles IA et les nouvelles API. Cela me permet de rester à jour sur les dernières innovations en IA.",
-    title: "OPEN AI",
-    icon: IconChatGPT,
+      "Sur Twitter, je suis des développeurs influents, des comptes officiels de frameworks et les hashtags tech pour capter les tendances émergentes et les nouvelles fonctionnalités en temps réel.",
+    title: "TWITTER",
+    icon: IconComputer,
   },
   {
     description:
-      "J’utilise Google Alerts pour suivre les sujets spécifiques comme les frameworks et les tendances du développement. Cela m’informe instantanément sur les nouvelles pertinentes.",
-    title: "GOOGLE ALERTS",
+      "Via Instagram, je suis des comptes spécialisés en design d'interface et UX/UI pour m'inspirer des dernières tendances visuelles et améliorer l'expérience utilisateur de mes projets.",
+    title: "INSTAGRAM",
+    icon: IconComputer,
+  },
+  {
+    description:
+      "Sur YouTube, je m'abonne à des chaînes éducatives tech qui présentent des tutoriels, des analyses de code et des conférences. Cette approche visuelle complète ma formation continue.",
+    title: "YOUTUBE",
+    icon: IconComputer,
+  },
+  {
+    description:
+      "Grâce aux notifications du Monde sur mon iPhone, je reste informé des actualités tech, des évolutions réglementaires et des innovations qui impactent directement mon secteur.",
+    title: "LE MONDE",
     icon: IconGoogle,
   },
   {
     description:
-      "Sur LinkedIn, je suis des experts et des entreprises du secteur technologique pour suivre les discussions et les tendances. Cela m’aide à m’impliquer dans la communauté.",
+      "Sur LinkedIn, je suis des experts et des entreprises du secteur technologique pour suivre les discussions et les tendances. Cela m'aide à m'impliquer dans la communauté et à développer mon réseau professionnel.",
     title: "LINKEDIN",
     icon: IconLinkedin,
   },
   {
     description:
-      "Je consulte les publications de l’ANSSI pour suivre les bonnes pratiques de cybersécurité et les alertes sur les vulnérabilités. Cela me permet de garantir la sécurité de mes projets.",
-    title: "ANSSI",
-    icon: IconComputer,
-  },
-  {
-    description:
-      "Je suis les actualités de la CNIL pour assurer la conformité avec le RGPD et respecter la protection des données. Cela m’aide à développer des applications respectueuses de la vie privée.",
-    title: "CNIL",
-    icon: IconComputer,
-  },
-  {
-    description:
-      "J’utilise des flux RSS pour centraliser les informations des blogs et sites technologiques. Cela me permet de suivre efficacement l’actualité sans perdre de temps.",
-    title: "FLUX RSS",
+      "Je participe activement à des forums et des communautés spécialisées comme Stack Overflow et GitHub où je peux suivre les problématiques actuelles et contribuer à l'écosystème open source.",
+    title: "COMMUNAUTÉS",
     icon: IconComputer,
   },
 ];

@@ -39,7 +39,7 @@ if (!projectData) router.push("/projects")
 					<h5>{{ projectData?.title }}</h5>
 					<p v-html="projectData?.description.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href=\'$2\' target=\'_blank\'>$1</a>').replace(/\\n/g, '<br>')"></p>
 					<h5>Le Projet :</h5>
-					<video v-if="projectData?.video" :src="projectData.video"></video>
+					<video v-if="projectData?.video ?? true" :src="`/video/projects/${projectData?.id}.mp4`" muted loop autoplay controls></video>
 				</div>
 			</div>
 		</div>
@@ -101,6 +101,12 @@ if (!projectData) router.push("/projects")
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+}
+
+.modal video {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
 }
 
 @media (max-width: 1000px) {

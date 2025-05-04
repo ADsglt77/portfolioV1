@@ -18,7 +18,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="semaine">
+  <div class="semaine" :id="`semaine-${week.semaine.replace(/\s+/g, '-')}`">
     <h4>{{ week.semaine }}</h4>
     <h5>{{ week.dates }}</h5>
     <ul>
