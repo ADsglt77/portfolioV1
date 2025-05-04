@@ -59,6 +59,32 @@
     ]
   },
   {
+    "id": "eprofil",
+    "title": "PROJET E-Profil",
+    "description": "A faire",
+    "techno": "NuxtJs + TypeScript + Prisma",
+    "imp": [
+      {
+        "icon": "github",
+        "link": "https://github.com/ADsglt77/r4iden"
+      },
+      {
+        "icon": "website",
+        "link": "https://r4iden.online/"
+      }
+    ],
+    "doc": false,
+    "techI": [
+      "nuxt",
+      "vue",
+      "ts",
+      "prisma",
+      "css",
+      "cloudflare",
+      "docker"
+    ]
+  },
+  {
     "id": "congres",
     "title": "PROJET Congres",
     "description": "A faire",
@@ -97,7 +123,7 @@
   {
     "id": "seminaire",
     "title": "PROJET Seminaire",
-    "description": "A faire",
+    "description": "Le projet Séminaire est une application web PHP qui permet la gestion d'un séminaire comportant plusieurs conférences. Cette application offre les fonctionnalités comme la consultation du programme des conférences, l'inscription des participants, la sélection des conférences par les participants et une interface d'administration pour visualiser les inscriptions",
     "techno": "PHP / MySQL + MVC",
     "imp": [
       {
@@ -105,11 +131,11 @@
         "link": "https://github.com/ADsglt77/seminaire"
       }
     ],
-    "doc": false,
     "techI": [
       "php",
       "mysql",
       "css"
-    ]
+    ],
+    "video": "seminaire"
   }
 ]
