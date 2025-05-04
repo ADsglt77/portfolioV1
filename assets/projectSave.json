@@ -1,0 +1,173 @@
+[
+    {
+      "id": "eprofil",
+      "title": "PROJET E-Profil",
+      "description": "A faire",
+      "techno": "NuxtJs + TypeScript + Prisma",
+      "doc": false,
+      "video": false,
+      "imp": [
+        {
+          "icon": "github",
+          "link": "https://github.com/ADsglt77/r4iden"
+        },
+        {
+          "icon": "website",
+          "link": "https://r4iden.online/"
+        }
+      ],
+      "techI": [
+        "nuxt",
+        "vue",
+        "ts",
+        "prisma",
+        "css",
+        "cloudflare",
+        "docker"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "title": "PROJET Portfolio",
+      "description": "Ce portfolio a été réalisé avec le framework NuxtJS et le langage TypeScript. Il est hébergé sur Cloudflare et utilise Docker pour la conteneurisation.",
+      "techno": "NuxtJs + TypeScript + Prisma",
+      "doc": false,
+      "video": false,
+      "imp": [
+        {
+          "icon": "github",
+          "link": "https://github.com/ADsglt77/portfolio"
+        },
+        {
+          "icon": "website",
+          "link": "https://adrien-segalat.fr/"
+        }
+      ],
+      "techI": [
+        "nuxt",
+        "vue",
+        "ts",
+        "prisma",
+        "css",
+        "cloudflare",
+        "docker"
+      ]
+    },
+    {
+      "id": "condat",
+      "title": "Projet Basket Club",
+      "description": "Ce projet consiste à créer un site vitrine pour le Club de Basket de Condat. Il mettra en avant les valeurs du club, ses licenciés et ses produits. Avec ce site vitrine un Dashboard sera développé pour les gérants du club, il permettra la mise à jour du site facilement et rapidement. Pour cela j’utiliserai le Framework [NuxtJS](https://nuxt.com)",
+      "techno": "NuxtJs + TypeScript + Prisma",
+      "video": false,
+      "imp": [
+        {
+          "icon": "github",
+          "link": "https://github.com/Condat-Basket-Club"
+        },
+        {
+          "icon": "website",
+          "link": "https://condatbasketclub.com/"
+        }
+      ],
+      "techI": [
+        "nuxt",
+        "vue",
+        "ts",
+        "prisma",
+        "css",
+        "cloudflare",
+        "docker"
+      ]
+    },
+    {
+      "id": "bibliotheque",
+      "title": "PROJET Bibliotheque",
+      "description": "Ce projet consiste à créer une application mobile pour une bibliothèque pouvant gérer des livres, des auteurs et des utilisateurs et les lier. Il a été développé en utilisant Android Studio avec Flutter et Dart pour répondre à la demande de la bibliothèque.",
+      "techno": "Dart + Android Studio",
+      "video": false,
+      "imp": [
+        {
+          "icon": "github",
+          "link": "https://github.com/ADsglt77/bibliotheque"
+        }
+      ],
+      "techI": [
+        "dart",
+        "flutter",
+        "android"
+      ]
+    },
+    {
+      "id": "jardinier",
+      "title": "PROJET Jardinier",
+      "description": "Cet atelier professionnel a pour but de réaliser une application web, à l’aide du Framework PHP Symfony. Cette application reprend le contexte d’un site de jardinerie, qui doit permettre de pourvoir créer des devis avec un ou plusieurs taillages de haies dans le même devis.",
+      "techno": "PHP + Symfony",
+      "video": false,
+      "imp": [
+        {
+          "icon": "github",
+          "link": "https://github.com/ADsglt77/jardinierV2"
+        }
+      ],
+      "techI": [
+        "php",
+        "symfony",
+        "css"
+      ]
+    },
+    {
+      "id": "congres",
+      "title": "PROJET Congres",
+      "description": "A faire",
+      "techno": "PHP-OBJET / MySQL + MVC",
+      "video": false,
+      "imp": [
+        {
+          "icon": "github",
+          "link": "https://github.com/ADsglt77/congres"
+        }
+      ],
+      "doc": false,
+      "techI": [
+        "php",
+        "mysql",
+        "css"
+      ]
+    },
+    {
+      "id": "seminaire",
+      "title": "PROJET Seminaire",
+      "description": "Le projet Séminaire est une application web PHP qui permet la gestion d'un séminaire comportant plusieurs conférences. Cette application offre les fonctionnalités comme la consultation du programme des conférences, l'inscription des participants, la sélection des conférences par les participants et une interface d'administration pour visualiser les inscriptions",
+      "techno": "PHP / MySQL + MVC",
+      "imp": [
+        {
+          "icon": "github",
+          "link": "https://github.com/ADsglt77/seminaire"
+        }
+      ],
+      "techI": [
+        "php",
+        "mysql",
+        "css"
+      ]
+    },
+    {
+      "id": "resto",
+      "title": "PROJET Resto",
+      "description": "Ce projet consiste à créer un site web pour un restaurant où l'on peut se connecter, liker des restaurants, mettre des commentaires et rechercher les restaurants selon certains critères.",
+      "techno": "PHP / MySQL + MVC",
+      "video": false,
+      "imp": [
+        {
+          "icon": "github",
+          "link": "https://github.com/ADsglt77/r3st0"
+        }
+      ],
+      "doc": false,
+      "techI": [
+        "php",
+        "mysql",
+        "css"
+      ]
+    }
+  ]

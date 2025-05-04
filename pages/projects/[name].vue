@@ -40,6 +40,7 @@ if (!projectData) router.push("/projects")
 					<p v-html="projectData?.description.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href=\'$2\' target=\'_blank\'>$1</a>').replace(/\\n/g, '<br>')"></p>
 					<h5>Le Projet :</h5>
 					<video v-if="projectData?.video ?? true" :src="`/video/projects/${projectData?.id}.mp4`" muted loop autoplay controls></video>
+					<p v-else>No video found</p>
 				</div>
 			</div>
 		</div>
