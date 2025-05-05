@@ -9,6 +9,12 @@ import { ref } from "vue";
 const projects = [
   {
     description:
+      "Sur LinkedIn, je suis des experts et des entreprises du secteur technologique pour suivre les discussions et les tendances. Cela m'aide à m'impliquer dans la communauté et à développer mon réseau professionnel.",
+    title: "LINKEDIN",
+    icon: IconLinkedin,
+  },
+  {
+    description:
       "Sur Twitter, je suis des développeurs influents, des comptes officiels de frameworks et les hashtags tech pour capter les tendances émergentes et les nouvelles fonctionnalités en temps réel.",
     title: "TWITTER",
     icon: IconComputer,
@@ -30,12 +36,6 @@ const projects = [
       "Grâce aux notifications du Monde sur mon iPhone, je reste informé des actualités tech, des évolutions réglementaires et des innovations qui impactent directement mon secteur.",
     title: "LE MONDE",
     icon: IconGoogle,
-  },
-  {
-    description:
-      "Sur LinkedIn, je suis des experts et des entreprises du secteur technologique pour suivre les discussions et les tendances. Cela m'aide à m'impliquer dans la communauté et à développer mon réseau professionnel.",
-    title: "LINKEDIN",
-    icon: IconLinkedin,
   },
   {
     description:
