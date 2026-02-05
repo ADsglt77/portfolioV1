@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
 	return {
 		statusCode: 200,
 		body: {
-			message: "Message sent successfully",
+			message: "Message sent successfully !",
 		},
 	};
 });
